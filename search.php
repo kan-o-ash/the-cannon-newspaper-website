@@ -30,16 +30,18 @@
 
 					<?php if ( has_post_thumbnail() ) : ?>
 					<!--BEGIN .featured-image -->
-					<div class="featured-image">
-						<div class="da-hover">
-							<span class="da-wrap">
-								<span class="title"><?php the_title(); ?></span>
-								<?php dt_overlay_icon(); ?>
-							</span>
+						<div class="featured-image">
+							<div class="da-hover">
+								<span class="da-wrap"><a href="<?php the_permalink(); ?>">
+									<span class="title"><?php the_title(); ?></span>
+									<?php dt_overlay_icon(); ?></a>
+
+								</span>
+							</div>
+							<a href="<?php the_permalink(); ?>"><?php dt_image(300, ''); ?></a>
+						<!--END .featured-image -->
 						</div>
-						<a href="<?php the_permalink(); ?>"><?php dt_image(300, ''); ?></a>
-					<!--END .featured-image -->
-					</div>
+
 					<?php endif; ?>
 					
 					<?php $format = get_post_format(); ?>
@@ -72,7 +74,6 @@
 						<span class="meta-published"
 							title="<?php 
 									the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?>">
-							<!--<?php _e('Posted', 'engine') ?> <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' '.  __('ago', 'engine'); ?>-->
 							<?php 
 								$cur_time = current_time('timestamp');
 								$post_time = get_the_time('U');

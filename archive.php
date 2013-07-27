@@ -76,14 +76,16 @@
 					<!--BEGIN .featured-image -->
 					<div class="featured-image">
 						<div class="da-hover">
-							<span class="da-wrap">
+							<span class="da-wrap"><a href="<?php the_permalink(); ?>">
 								<span class="title"><?php the_title(); ?></span>
-								<?php dt_overlay_icon(); ?>
+								<?php dt_overlay_icon(); ?></a>
+
 							</span>
 						</div>
 						<a href="<?php the_permalink(); ?>"><?php dt_image(300, ''); ?></a>
 					<!--END .featured-image -->
 					</div>
+
 					<?php endif; ?>
 					
 					<span class="meta-category"><?php the_category(', '); ?></span>
@@ -108,9 +110,16 @@
 					<!--BEGIN .post-footer -->
 					<div class="post-footer">
 						
-						<span class="meta-published"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' '.  __('ago', 'engine'); ?></span>
-						
-						<span class="meta-comments"><?php comments_number(__('No Comments', 'engine'), __('1 Comment', 'engine'), __('% Comments', 'engine')); ?></span>
+						<span class="meta-published"
+							title="<?php 
+									the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?>">
+							<?php 
+								$cur_time = current_time('timestamp');
+								$post_time = get_the_time('U');
+								if ($cur_time-$post_time >259200) the_time('F j, Y');
+								else echo human_time_diff($post_time, $cur_time) . " ago ";
+							 ?>
+						</span>	
 					
 					</div>
 					<!--END .post-footer -->

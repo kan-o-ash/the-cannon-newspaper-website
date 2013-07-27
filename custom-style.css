@@ -80,3 +80,10 @@ ul.social li{
 .sx_like-dark_fav{
     display: none !important;
 }
+
+#err404 {
+    font-size: 20em;
+    font-family: 'Candal', Arial, Helvetica;
+    position: absolute;
+    left: 0px;
+}
