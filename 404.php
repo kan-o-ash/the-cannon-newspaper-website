@@ -15,7 +15,7 @@
 			</div>
 			
 			<!--BEGIN .post-content -->
-			<div class="post-content">
+			<div class="post-content" style="padding-top: 0;">
 			
 				<p><?php _e('The page you are looking for cannot be found.', 'engine'); ?></p>
 				

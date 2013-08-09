@@ -91,7 +91,7 @@ hr {
 }
 
 #main {
-    width: 940px;
+    width: 960px;
     margin: 0 auto 30px;
 }
 
@@ -171,7 +171,7 @@ pre { overflow: scroll }
 }
 
 #header-inner {
-	width: 940px;
+	width: 960px;
 	margin: 30px auto 0;
 	position: relative;
 	z-index: 20;

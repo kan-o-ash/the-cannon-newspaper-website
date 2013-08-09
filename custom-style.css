@@ -23,9 +23,26 @@ body{
     padding: 0 0 25px;
 }
 
+#logo h1, #logo div{
+    margin-top: 30px;
+}
+
+#site-title img {
+    padding: 10px 0 10px;
+}
+
 #archive-title{
     margin-bottom: 25px;
+    margin-right:0;
+}
 
+#archive-title .inner {
+    background: #fff;
+    padding: 14px 10px 10px;
+}
+
+.item {
+    margin: 0 10px 20px 10px;
 }
 
 .featured {
@@ -56,6 +73,14 @@ body{
 }*/
 #copyright {
     /*float:left;*/
+
+}
+.single #content {
+    max-width: 640px;
+}
+
+#sidebar {
+    margin-right:0;
 }
 
 ul.social{
@@ -79,4 +104,10 @@ ul.social li{
 
 .sx_like-dark_fav{
     display: none !important;
+
+}
+
+#usp-submit input{
+    margin:auto;
+
 }
