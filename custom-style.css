@@ -87,3 +87,38 @@ ul.social li{
     position: absolute;
     left: 0px;
 }
+
+
+/* author sidebar style */
+#author-info {
+    background-color: #e3e3e3;
+    padding: 10px;
+}
+
+.circleBase {
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    behavior: url(PIE.htc);
+}
+
+#author-info h2{
+    margin-bottom: -5px;
+}
+
+#author-info h3 {
+    margin-bottom: 10px;
+}
+
+#author-info p {
+    text-align: left;
+    margin-left: 2em;
+    margin-bottom: 10px;
+}
+
+#avatar-boundary {
+    width:110px;
+    height:110px;
+    background-color: #e3e3e3;
+    margin: auto;
+}

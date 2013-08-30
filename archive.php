@@ -3,63 +3,76 @@
 	<!--BEGIN #content -->
     <div id="content">
     	
-    	<!-- BEGIN #archive-title -->
-    	<div id="archive-title">
-    		
-			<div class="inner">
-				
-				<?php 
-				// Get author data 
-				if(get_query_var('author_name')) :
-					$curauth = get_userdatabylogin(get_query_var('author_name'));
-				else :
-					$curauth = get_userdata(get_query_var('author'));
-				endif;
-				?>	
-		 	  	
-		 	  	<?php if (is_category()) : ?>
-					<h1 id="page-title">
-						<?php echo single_cat_title(); ?>
-						<span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-ribbon.png" alt="" /></span>
-					</h1>
-					<?php
-						$cat_desc = category_description();
-						if ($cat_desc != '') echo '<div class="cat-desc">'.category_description().'</div>';
-					?>
+    	<?php if (!is_author()) : ?>
+    		<!-- BEGIN #archive-title -->
+	    	<div id="archive-title">
+	    		
+				<div class="inner">
 					
-		 	  	<?php elseif( is_tag() ) : ?>
-					<h1 id="page-title"><?php echo single_tag_title(); ?></h1>
-					
-		 	  	<?php elseif (is_day()) : ?>
-					<h1 id="page-title"><?php the_time('F jS, Y'); ?></h1>
-					
-		 	 	<?php elseif (is_month()) : ?>
-					<h1 id="page-title"><?php the_time('F, Y'); ?></h1>
-					
-		 		<?php elseif (is_year()) : ?>
-					<h1 id="page-title"><?php the_time('Y'); ?></h1>
-					
-			  	<?php elseif (is_author()) : ?>
-					<h1 id="page-title"><?php echo $curauth->display_name; ?></h1>
-					
-		 	  	<?php elseif (isset($_GET['paged']) && !empty($_GET['paged'])) : ?>
-					<h1 id="page-title"><?php _e('Blog Archives', 'engine') ?></h1>
-					
-				<?php elseif (is_search()) : ?>
-					<h1 id="page-title">
-						<?php _e('Search Results', 'engine') ?> <?php echo $_GET['s']; ?>
-						<span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-search.png" alt="" /></span>
-						<div class="search-wrap clearfix"><?php get_search_form(); ?></div>
-					</h1>
-					
-				<?php endif; ?>
+					<?php 
+					// Get author data 
+					if(get_query_var('author_name')) :
+						$curauth = get_userdatabylogin(get_query_var('author_name'));
+					else :
+						$curauth = get_userdata(get_query_var('author'));
+					endif;
+					?>	
+			 	  	
+			 	  	<?php if (is_category()) : ?>
+						<h1 id="page-title">
+							<?php echo single_cat_title(); ?>
+							<span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-ribbon.png" alt="" /></span>
+						</h1>
+						<?php
+							$cat_desc = category_description();
+							if ($cat_desc != '') echo '<div class="cat-desc">'.category_description().'</div>';
+						?>
+						
+			 	  	<?php elseif( is_tag() ) : ?>
+						<h1 id="page-title"><?php echo single_tag_title(); ?></h1>
+						
+			 	  	<?php elseif (is_day()) : ?>
+						<h1 id="page-title"><?php the_time('F jS, Y'); ?></h1>
+						
+			 	 	<?php elseif (is_month()) : ?>
+						<h1 id="page-title"><?php the_time('F, Y'); ?></h1>
+						
+			 		<?php elseif (is_year()) : ?>
+						<h1 id="page-title"><?php the_time('Y'); ?></h1>
+						
+			 	  	<?php elseif (isset($_GET['paged']) && !empty($_GET['paged'])) : ?>
+						<h1 id="page-title"><?php _e('Blog Archives', 'engine') ?></h1>
+						
+					<?php elseif (is_search()) : ?>
+						<h1 id="page-title">
+							<?php _e('Search Results', 'engine') ?> <?php echo $_GET['s']; ?>
+							<span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-search.png" alt="" /></span>
+							<div class="search-wrap clearfix"><?php get_search_form(); ?></div>
+						</h1>
+						
+					<?php endif; ?>
 
-			</div>
-
-    	</div>
+				</div>
+			<?php endif; ?>
+	    	</div>
     	<!-- END #archive-title -->
-    	
+    	<?php if (is_author()) : ?>
+    		<div id = "sidebar">
+    			<div id = "blog-sidebar" class = "widget-area">
+    				<div id = "author-info">
+						<div class = "circleBase" id = "avatar"></div>
+						<h2><?php echo get_the_author_meta( 'description' ); ?></h2>
+						<h3>NΨ 1T4</h3>
+						<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+						</p>
+					</div>
+				</div>
+    		</div>	
+		<?php endif; ?>
     	<?php get_sidebar(); ?>
+
+
  	
     	<!--BEGIN #masonry -->	
 		<div id="masonry">

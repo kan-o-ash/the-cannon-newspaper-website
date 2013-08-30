@@ -10,6 +10,16 @@
 
 // ADD YOUR CUSTOM CSS BELOW THIS LINE
 
+function custom_search_form($searchText) {
+
+
+	$form = get_search_form(false);
+	$form = str_replace('To search type and hit enter', $searchText, $form);
+
+	$form = $form . '100';
+
+	return $form;
+}
 
 
 ?>
