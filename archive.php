@@ -3,60 +3,58 @@
 	<!--BEGIN #content -->
     <div id="content">
     	
-    	<!-- BEGIN #archive-title -->
-    	<div id="archive-title">
-    		
-			<div class="inner">
-				
-				<?php 
-				// Get author data 
-				if(get_query_var('author_name')) :
-					$curauth = get_userdatabylogin(get_query_var('author_name'));
-				else :
-					$curauth = get_userdata(get_query_var('author'));
-				endif;
-				?>	
-		 	  	
-		 	  	<?php if (is_category()) : ?>
-					<h1 id="page-title">
-						<?php echo single_cat_title(); ?>
-						<span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-ribbon.png" alt="" /></span>
-					</h1>
-					<?php
-						$cat_desc = category_description();
-						if ($cat_desc != '') echo '<div class="cat-desc">'.category_description().'</div>';
-					?>
+    	<?php if (!is_author()) : ?>
+    		<!-- BEGIN #archive-title -->
+	    	<div id="archive-title">
+	    		
+				<div class="inner">
 					
-		 	  	<?php elseif( is_tag() ) : ?>
-					<h1 id="page-title"><?php echo single_tag_title(); ?></h1>
-					
-		 	  	<?php elseif (is_day()) : ?>
-					<h1 id="page-title"><?php the_time('F jS, Y'); ?></h1>
-					
-		 	 	<?php elseif (is_month()) : ?>
-					<h1 id="page-title"><?php the_time('F, Y'); ?></h1>
-					
-		 		<?php elseif (is_year()) : ?>
-					<h1 id="page-title"><?php the_time('Y'); ?></h1>
-					
-			  	<?php elseif (is_author()) : ?>
-					<h1 id="page-title"><?php echo $curauth->display_name; ?></h1>
-					
-		 	  	<?php elseif (isset($_GET['paged']) && !empty($_GET['paged'])) : ?>
-					<h1 id="page-title"><?php _e('Blog Archives', 'engine') ?></h1>
-					
-				<?php elseif (is_search()) : ?>
-					<h1 id="page-title">
-						<?php _e('Search Results', 'engine') ?> <?php echo $_GET['s']; ?>
-						<span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-search.png" alt="" /></span>
-						<div class="search-wrap clearfix"><?php get_search_form(); ?></div>
-					</h1>
-					
-				<?php endif; ?>
+					<?php 
+					// Get author data 
+					if(get_query_var('author_name')) :
+						$curauth = get_userdatabylogin(get_query_var('author_name'));
+					else :
+						$curauth = get_userdata(get_query_var('author'));
+					endif;
+					?>	
+			 	  	
+			 	  	<?php if (is_category()) : ?>
+						<h1 id="page-title">
+							<?php echo single_cat_title(); ?>
+							<span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-ribbon.png" alt="" /></span>
+						</h1>
+						<?php
+							$cat_desc = category_description();
+							if ($cat_desc != '') echo '<div class="cat-desc">'.category_description().'</div>';
+						?>
+						
+			 	  	<?php elseif( is_tag() ) : ?>
+						<h1 id="page-title"><?php echo single_tag_title(); ?></h1>
+						
+			 	  	<?php elseif (is_day()) : ?>
+						<h1 id="page-title"><?php the_time('F jS, Y'); ?></h1>
+						
+			 	 	<?php elseif (is_month()) : ?>
+						<h1 id="page-title"><?php the_time('F, Y'); ?></h1>
+						
+			 		<?php elseif (is_year()) : ?>
+						<h1 id="page-title"><?php the_time('Y'); ?></h1>
+						
+			 	  	<?php elseif (isset($_GET['paged']) && !empty($_GET['paged'])) : ?>
+						<h1 id="page-title"><?php _e('Blog Archives', 'engine') ?></h1>
+						
+					<?php elseif (is_search()) : ?>
+						<h1 id="page-title">
+							<?php _e('Search Results', 'engine') ?> <?php echo $_GET['s']; ?>
+							<span class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-search.png" alt="" /></span>
+							<div class="search-wrap clearfix"><?php get_search_form(); ?></div>
+						</h1>
+						
+					<?php endif; ?>
 
-			</div>
-
-    	</div>
+				</div>
+			<?php endif; ?>
+	    	</div>
     	<!-- END #archive-title -->
     	
     	<?php get_sidebar(); ?>
@@ -76,9 +74,10 @@
 					<!--BEGIN .featured-image -->
 					<div class="featured-image">
 						<div class="da-hover">
-							<span class="da-wrap">
+							<span class="da-wrap"><a href="<?php the_permalink(); ?>">
 								<span class="title"><?php the_title(); ?></span>
-								<?php dt_overlay_icon(); ?>
+								<?php dt_overlay_icon(); ?></a>
+
 							</span>
 						</div>
 						<a href="<?php the_permalink(); ?>"><?php dt_image(300, ''); ?></a>
@@ -108,9 +107,16 @@
 					<!--BEGIN .post-footer -->
 					<div class="post-footer">
 						
-						<span class="meta-published"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' '.  __('ago', 'engine'); ?></span>
-						
-						<span class="meta-comments"><?php comments_number(__('No Comments', 'engine'), __('1 Comment', 'engine'), __('% Comments', 'engine')); ?></span>
+						<span class="meta-published"
+							title="<?php 
+									the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?>">
+							<?php 
+								$cur_time = current_time('timestamp');
+								$post_time = get_the_time('U');
+								if ($cur_time-$post_time >259200) the_time('F j, Y');
+								else echo human_time_diff($post_time, $cur_time) . " ago ";
+							 ?>
+						</span>	
 					
 					</div>
 					<!--END .post-footer -->
