@@ -11,20 +11,57 @@ WHY USE THIS FILE:
 
 ===============================================================================
 ADD YOUR CUSTOM CSS BELOW THIS LINE */
+#secondary-menu {
+    width: 100%;
+    background: #333;
+}
+
+#secondary-menu ul a {
+    font-size: 14px;
+    line-height: 45px;
+    color: #fff;
+}
+
+#secondary-menu ul a:hover {
+    color: #0080ff;
+}
+
+#secondary-menu ul ul{
+    width:auto;
+    border-radius:20px;
+}
+
+#secondary-menu ul li:hover ul, #secondary-menu ul li.sfHover ul{
+    left:auto;
+}
+
+#primary-menu{
+    display:none;
+}
+
 .fbFeedbackContent{
     min-height: 0px !important;
 }
+
 body{
     margin: 0;
 }
 
 #header {
-    margin-top: -35px;
+    margin-top: 0;
     padding: 0 0 25px;
 }
 
+#header-inner {
+    margin-top: 0;
+}
+
+#logo{
+    float: left;
+}
+
 #logo h1, #logo div{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 #site-title img {
