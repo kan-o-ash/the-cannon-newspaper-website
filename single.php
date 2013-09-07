@@ -52,7 +52,7 @@
 					<?php
 					global $wp_embed;
 					$video_url = get_post_meta(get_the_ID(), 'dt_video', true);
-					$video_embed = $wp_embed->run_shortcode('[embed width="620"]'.$video_url.'[/embed]');
+					$video_embed = $wp_embed->run_shortcode('[embed width="640"]'.$video_url.'[/embed]');
 					?>
 					<div id="video-<?php the_ID(); ?>"><?php echo $video_embed; ?></div>
 
@@ -86,7 +86,7 @@
                             	$format = get_post_format();
                             	$src = wp_get_attachment_image_src( $attachment->ID, array( '9999','9999' ), false, '' );
 								$src = $src[0];
-								$image = dt_resize($attachment->ID, $src, 620, '', true);
+								$image = dt_resize($attachment->ID, $src, 640, '', true);
                              ?>
 
                         	<div>
@@ -123,7 +123,7 @@
 
 					<?php 
 					$thumb = get_post_thumbnail_id(get_the_ID());
-					$image = dt_resize( $thumb, '', 620, '', true );
+					$image = dt_resize( $thumb, '', 640, '', true );
 					echo '<img src="'.$image['url'].'" width="'.$image['width'].'" height="'.$image['height'].'" alt="" />';
 					?>
 

@@ -7,28 +7,40 @@
     <div id="content">
 		<div id = "sidebar">
 			<div id = "blog-sidebar" class = "widget-area">
-				<div id = "author-info">
-					<div id = "avatar-boundary">
+				
+			</div>
+		</div>	
+    	
+
+    	<!--BEGIN #masonry -->	
+		<div id="masonry">
+			<!-- author info first -->	
+			<div class="item normal" data-order='1'>
+			
+				<!--BEGIN .hentry -->
+				<div  id="authorBlock">
+					
+					<div id = "author-info">
+					<div id = "avatar-boundary" style = "padding-bottom:40px">
 						<img class = "circleBase" id = "avatar"
-							src = " <?php echo bloginfo('template_directory');?>/images/authors/<?php echo $curauth->ID ?>.jpg"
+							src = " <?php echo bloginfo('template_directory');?>/images/authors/<?php echo $curauth->first_name ?>-web.jpg"
 						/>
 					</div>
 					<h2><?php echo $curauth->first_name.' '.$curauth->last_name; ?></h2>
 					<h3><?php echo $curauth->aim; ?></h3>
+					<h3><?php echo $curauth->yim; ?></h3>
 					<p>
 					<?php echo $curauth->description; ?>
 					</p>
 
+					</div>
+				<!--END .hentry-->  
 				</div>
+			
+			<!--END .item author info -->	
 			</div>
-		</div>	
-    	<?php get_sidebar(); ?>
 
 
- 	
-    	<!--BEGIN #masonry -->	
-		<div id="masonry">
-					
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
 			<!--BEGIN .item -->	
@@ -95,7 +107,7 @@
 			<!--END .item -->	
 			</div>
 			<?php endwhile; endif; ?>
-			
+
 			<?php get_template_part('includes/index-loadmore'); ?>
 					
 		<!--END #masonry -->

@@ -22,17 +22,52 @@ ADD YOUR CUSTOM CSS BELOW THIS LINE */
     color: #fff;
 }
 
+#secondary-menu table{
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.post-header .meta-author a{
+    font-size: 12px;
+}
+
+.post-header .meta-author a:hover{
+    color: #0080ff;
+}
+
+#secondary-menu .navigation{
+    float: left;
+}
+
+#secondary-menu .menu-search{
+    float: right;
+}
+
+.menu-search div{
+    margin: 6px 0;
+}
+
 #secondary-menu ul a:hover {
     color: #0080ff;
 }
 
 #secondary-menu ul ul{
+    min-width:600px;
     width:auto;
     border-radius:20px;
 }
 
 #secondary-menu ul li:hover ul, #secondary-menu ul li.sfHover ul{
     left:auto;
+    top:45px;
+}
+
+#secondary-menu td, tr, table{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border-width:0;
 }
 
 #primary-menu{
@@ -49,7 +84,7 @@ body{
 
 #header {
     margin-top: 0;
-    padding: 0 0 25px;
+    padding: 5px 0 10px;
 }
 
 #header-inner {
@@ -57,7 +92,8 @@ body{
 }
 
 #logo{
-    float: left;
+    /*float: left;*/
+    width: 400px;
 }
 
 #logo h1, #logo div{
@@ -189,3 +225,29 @@ ul.social li{
     background-color: #e3e3e3;
     margin: auto;
 }
+
+.page-template-default #content .hentry,
+.page-template-template-fullwidth-php #content .hentry,
+.single #content .hentry {
+    padding: 7px 0;
+    border: 0;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+    overflow: hidden;
+}
+
+.page-template-default #content .post-header,
+.page-template-template-fullwidth-php #content .post-header,
+.single #content .post-header {
+    background: #fff;
+    padding: 20px 30px 5px;
+}
+
+
+
+/* hackish fix for mageds broken header
+.logo {
+    z-index: 2;
+    margin-top:40px;
+}*/

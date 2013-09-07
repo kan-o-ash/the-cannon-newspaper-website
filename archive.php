@@ -57,7 +57,7 @@
 	    	</div>
     	<!-- END #archive-title -->
     	
-    	<?php get_sidebar(); ?>
+		<?php /* get_sidebar();*/ ?>
  	
     	<!--BEGIN #masonry -->	
 		<div id="masonry">

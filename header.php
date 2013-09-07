@@ -70,12 +70,22 @@
 		<!-- #secondary-menu -->
 		<div id="secondary-menu">
 			
-			<!-- .centered-menu -->
+			<!-- .centered-menu --><!--
 			<div class="centered-menu">
 				<?php if ( has_nav_menu( 'secondary-menu' ) ) : wp_nav_menu( array( 'theme_location' => 'secondary-menu', 'depth' => 2 ) ); endif; ?>
-			</div>
+			</div>-->
 			<!-- /.centered-menu -->
-			
+			<!-- .left-menu -->
+			<table><tr><td class="navigation">
+			<div class="secondary-menu-left">
+				<?php if ( has_nav_menu( 'secondary-menu' ) ) : wp_nav_menu( array( 'theme_location' => 'secondary-menu', 'depth' => 2 ) ); endif; ?>
+			</div>
+			<!-- /.left-menu -->
+			</td><td class="menu-search">
+			<div class="">
+				<?php the_widget("DT_Search", array("search_text" => "search...")) ?>
+			</div>
+			</td></tr></table>
 		</div>
 		<!-- /#secondary-menu -->
 			
