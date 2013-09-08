@@ -15,6 +15,7 @@ function test_new_contact(){
   $user_contactmethods = array(
       'aim' => __('Discipline + Year'),
       'yim' => __('Position'),
+      'order' => __("Don't Change"),
   );
   return $user_contactmethods;
 }
