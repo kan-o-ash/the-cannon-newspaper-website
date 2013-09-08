@@ -24,12 +24,9 @@ body {
 
 .page #content { width: 100%;  }
 
-.post-75 #post-75 { background-color: #ffffff }
-
 .page .hentry,
 .single .hentry {
     width: 100%;
-    float: left;
 }
 
 #hentry-wrap {
@@ -207,16 +204,7 @@ body {
 
 #site-title a:hover { color: #9c0; }
 #site-title a:active { color: #9c0; }
-/*
-#ending{
-    text-transform: uppercase;
-    max-width: 940px;
-    margin: 0 auto;
-}*/
-#copyright {
-    /*float:left;*/
 
-}
 .single #content {
     max-width: 640px;
 }
@@ -224,7 +212,6 @@ body {
 #sidebar {
     margin-right:0;
 }
-
 
 .sidebar-on #load-more { width: auto; }
 
@@ -255,7 +242,6 @@ ul.social li{
 
 .sx_like-dark_fav{
     display: none !important;
-
 }
 
 #usp-submit input{
@@ -268,7 +254,6 @@ ul.social li{
     position: absolute;
     left: 0px;
 }
-
 
 /* author sidebar style */
 #author-info {
@@ -304,18 +289,6 @@ ul.social li{
     margin: auto;
 }
 
-.page-template-default #content .hentry,
-.page-template-template-fullwidth-php #content .hentry,
-.page-template-abouttemplate-php #content .hentry,
-.single #content .hentry {
-    padding: 7px 0;
-    border: 0;
-    background: #ddd;
-    border: 1px solid #ccc;
-    border-width: 1px 0;
-    overflow: hidden;
-}
-
 .page-template-default #content .post-header,
 .page-template-template-fullwidth-php #content .post-header,
 .page-template-abouttemplate-php #content .post-header,
@@ -329,9 +302,6 @@ ul.social li{
 .page-template-abouttemplate-php #content .post-content,
 .single #content .post-content {
     overflow: visible;
-}
-.page-template-abouttemplate-php #content .post-content{
-    padding:0;
 }
 
 .page-template-template-fullwidth-php #content .post-content {  padding: 10px 30px 20px; }
