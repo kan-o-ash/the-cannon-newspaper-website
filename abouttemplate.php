@@ -17,7 +17,7 @@ Template Name: abouttemplate
     }
 
     .author-inner{
-        width: 240px;
+        width: 290px;
         margin:auto;
     }
 
@@ -33,7 +33,7 @@ Template Name: abouttemplate
 
     .about-info {
         font-size: 1.2em;
-        width:  240px;
+        width:  290px;
         text-align: center;
         color: black;
     }
@@ -48,7 +48,7 @@ Template Name: abouttemplate
     }
 
     .author-table tr td:hover {
-        background: rgba(0,0,0,0.1);
+        background: rgba(0,0,0,0.05);
     }
 
     tr:nth-child(even) {
@@ -98,6 +98,10 @@ Template Name: abouttemplate
                 <!--BEGIN .post-header-->
                 <div class="post-header">
                     <div class="inner">
+                        <h2 class="post-title">About The Cannon</h2>
+                        <p style="text-align: left; font: normal 13px/1.8 'Merriweather', serif;">The Cannon is the official newspaper of the University of Toronto <a href="http://skulepedia.ca/wiki/Engineering_Society" title="Engineering Society" target="_blank">Engineering Society</a>.
+                        Established in 1978, it serves the undergraduate students of the Faculty of Applied Science and Engineering, with a circulation of up to 4000 across the University of Toronto campus.
+                        It is one of two newspapers funded by the Engineering Society, and is the more serious of the two.</p>
                         <h2 class="post-title" style="padding: 0; background:none;">Meet the team</h2>
                         <h2 class="post-title">1T2 - 1T3</h2>
                     </div>
@@ -128,25 +132,34 @@ Template Name: abouttemplate
 
 
                     $chunkedAuthors = array_chunk($authors, 3);
+                    $count = 0;
                  ?> 
                 <table class="author-table"> 
                     <tbody>
                         <?php foreach ($chunkedAuthors as $currRow) { ?>
                         <tr>
-                            <?php foreach ($currRow as $curauth) {?>
+                            <?php foreach ($currRow as $curauth) { $count++; ?>
                             <td class="author-cell">
                             <a class="author-link" href="<?php echo get_author_posts_url($curauth->ID); ?>">
-                                <div class="author-inner">
-                                    <div class="about-avatar"> <?php //echo $curauth; ?>
-                                        <img src="<?php echo bloginfo('template_directory');?>/images/authors/<?php echo $curauth->first_name; ?>-web.jpg"/>
-                                    </div>
-                                    <?php 
-                                        $info = $curauth->first_name.' '.$curauth->last_name."<br />".$curauth->aim."<br />".$curauth->yim; 
-                                    ?>
-                                    <div class="about-info"><?php echo $info ?></div>
-                                </div>
+                                <div style="position:absolute; z-index:1; width:100%; height:100%"></div>
                             </a>
-                            </td>
+                            <div class="author-inner">
+                                <div class="about-avatar"> <?php //echo $curauth; ?>
+                                    <img src="<?php echo bloginfo('template_directory');?>/images/authors/<?php echo $curauth->first_name; ?>-web.jpg"/>
+                                </div>
+                                <?php 
+                                    $info = $curauth->first_name.' '.$curauth->last_name."<br />".$curauth->aim."<br />".$curauth->yim; 
+                                    if ($count <= 10){
+                                        if ($curauth->id == 36){
+                                            $curauth_email = "arts.culture@cannon.skule.ca";
+                                        }
+                                        else{ $curauth_email = $curauth->user_email; }
+                                        $info = $info . '<br /><a style="position:relative; z-index:2;" href="mailto:' .$curauth_email.'">'.$curauth_email."</a>";
+                                    }
+                                ?>
+                                <div class="about-info"><?php echo $info ?></div>
+                            </div>
+                        </td>
                             <?php } ?>
                         </tr>
                         <?php } ?>
