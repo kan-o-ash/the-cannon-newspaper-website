@@ -102,7 +102,7 @@ body {
 }
 
 #secondary-menu ul li:hover ul, #secondary-menu ul li.sfHover ul{
-    left:auto;
+    left:0px;
     top:45px;
 }
 
