@@ -11,6 +11,48 @@ WHY USE THIS FILE:
 
 ===============================================================================
 ADD YOUR CUSTOM CSS BELOW THIS LINE */
+
+body {
+    background: url("http://skule.ca/content/thecannon_bg_pattern.png");
+    font-family: 'Merriweather', Open Sans, Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+#main {
+    width: 960px;
+}
+
+.page #content { width: 100%;  }
+
+.post-75 #post-75 { background-color: #ffffff }
+
+.page .hentry,
+.single .hentry {
+    width: 100%;
+    float: left;
+}
+
+#hentry-wrap {
+    width: 100%;
+}
+
+.page #content {
+    max-width: 100%;
+    float: left;
+}
+
+#header {
+    padding: 0 0 30px;
+}
+
+#header-inner {
+    width: 960px;
+}
+
+#logo {
+    background: none;
+}
+
 #secondary-menu {
     width: 100%;
     background: #333;
@@ -26,6 +68,10 @@ ADD YOUR CUSTOM CSS BELOW THIS LINE */
     width: 960px;
     margin-right: auto;
     margin-left: auto;
+}
+
+#secondary-menu ul a {
+    color: none;
 }
 
 .post-header .meta-author a{
@@ -74,12 +120,16 @@ ADD YOUR CUSTOM CSS BELOW THIS LINE */
     display:none;
 }
 
-.fbFeedbackContent{
-    min-height: 0px !important;
+#primary-menu ul a {
+    text-shadow: none;
 }
 
-body{
-    margin: 0;
+#primary-menu ul li.current-menu-item li a:hover,
+#primary-menu ul a.active,
+#primary-menu ul ul li.current-menu-item a,
+#primary-menu ul a:hover {
+    background:#0080ff;
+    color:#333;
 }
 
 #header {
@@ -118,8 +168,27 @@ body{
     margin: 0 10px 20px 10px;
 }
 
+.item .meta-category {
+    border-radius: 20px;
+}
+
 .featured {
     margin-bottom: 25px;
+}
+
+.featured .post-title a {
+    //color:rgb(255,242,0);
+    color: #fff;
+    font-size: 40px;
+}
+
+.featured-image div .da-wrap {
+    position: relative;
+    width: auto;
+}
+
+.featured .featured-details a.read-more {
+    color:rgb(255,242,0);
 }
 
 #comments {
@@ -154,6 +223,15 @@ body{
 
 #sidebar {
     margin-right:0;
+}
+
+
+.sidebar-on #load-more { width: auto; }
+
+#load-more.disabled,
+#load-more.disabled a,
+#load-more.disabled:hover .count-text {
+    display:none;
 }
 
 ul.social{
@@ -228,6 +306,7 @@ ul.social li{
 
 .page-template-default #content .hentry,
 .page-template-template-fullwidth-php #content .hentry,
+.page-template-abouttemplate-php #content .hentry,
 .single #content .hentry {
     padding: 7px 0;
     border: 0;
@@ -239,15 +318,30 @@ ul.social li{
 
 .page-template-default #content .post-header,
 .page-template-template-fullwidth-php #content .post-header,
+.page-template-abouttemplate-php #content .post-header,
 .single #content .post-header {
     background: #fff;
     padding: 20px 30px 5px;
 }
 
+.page-template-default #content .post-content,
+.page-template-template-fullwidth-php #content .post-content,
+.page-template-abouttemplate-php #content .post-content,
+.single #content .post-content {
+    overflow: visible;
+}
+.page-template-abouttemplate-php #content .post-content{
+    padding:0;
+}
 
+.page-template-template-fullwidth-php #content .post-content {  padding: 10px 30px 20px; }
 
-/* hackish fix for mageds broken header
-.logo {
-    z-index: 2;
-    margin-top:40px;
-}*/
+#filter li:hover,
+#filter li.active {
+    background: rgb(3,24,175);
+}
+
+#filter li:hover a,
+#filter li.active a { 
+    color: rgb(255,242,0);
+}
