@@ -315,3 +315,32 @@ ul.social li{
 #filter li.active a { 
     color: rgb(255,242,0);
 }
+
+
+/*---------------------------------------------------------------------------*/
+/*  Tablets - for 980px or less
+/*---------------------------------------------------------------------------*/
+
+@media screen and (max-width: 980px) {
+
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*  Mobiles - for 680px or less
+/*---------------------------------------------------------------------------*/
+
+@media screen and (max-width: 640px) {
+    #header {
+        //margin-top: 50px !important;
+        padding: 0 !important;
+    }
+
+    #logo {
+        margin: 0 !important;
+    }
+
+    #rum_sst_tab{
+        display:none;
+    }
+}
