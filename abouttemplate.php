@@ -9,6 +9,7 @@ Template Name: abouttemplate
 <style type="text/css">
     .author-cell {
         padding: 0;
+        width: 33%;
     }
 
     .author-link {
@@ -17,10 +18,14 @@ Template Name: abouttemplate
     }
 
     .author-inner{
-        width: 290px;
+        width: 100%;
         margin:auto;
     }
 
+    .avatar-wrap {
+        width: 100%;
+        margin: 0;
+    }
     .about-avatar {
         width: 160px;
         height: 200px;
@@ -33,9 +38,16 @@ Template Name: abouttemplate
 
     .about-info {
         font-size: 1.2em;
-        width:  290px;
+        width:  100%;
         text-align: center;
         color: black;
+        position: relative;
+        z-index: 2;
+    }
+
+    .about-info a{
+        width:245px;
+        margin:auto;
     }
 
     table a {
@@ -140,13 +152,13 @@ Template Name: abouttemplate
                         <tr>
                             <?php foreach ($currRow as $curauth) { $count++; ?>
                             <td class="author-cell">
-                            <a class="author-link" href="<?php echo get_author_posts_url($curauth->ID); ?>">
-                                <div style="position:absolute; z-index:1; width:100%; height:100%"></div>
-                            </a>
                             <div class="author-inner">
-                                <div class="about-avatar"> <?php //echo $curauth; ?>
-                                    <img src="<?php echo bloginfo('template_directory');?>/images/authors/<?php echo $curauth->first_name; ?>-web.jpg"/>
-                                </div>
+                                <a class="author-link" href="<?php echo get_author_posts_url($curauth->ID); ?>">
+                                <div class="avatar-wrap">
+                                    <div class="about-avatar"> <?php //echo $curauth; ?>
+                                        <img src="<?php echo bloginfo('template_directory');?>/images/authors/<?php echo $curauth->first_name; ?>-web.jpg"/>
+                                    </div>
+                                </div></a>
                                 <?php 
                                     $info = $curauth->first_name.' '.$curauth->last_name."<br />".$curauth->aim."<br />".$curauth->yim; 
                                     if ($count <= 10){
@@ -154,7 +166,7 @@ Template Name: abouttemplate
                                             $curauth_email = "arts.culture@cannon.skule.ca";
                                         }
                                         else{ $curauth_email = $curauth->user_email; }
-                                        $info = $info . '<br /><a style="position:relative; z-index:2;" href="mailto:' .$curauth_email.'">'.$curauth_email."</a>";
+                                        $info = $info . '<br /><a href="mailto:' .$curauth_email.'">'.$curauth_email."</a>";
                                     }
                                 ?>
                                 <div class="about-info"><?php echo $info ?></div>

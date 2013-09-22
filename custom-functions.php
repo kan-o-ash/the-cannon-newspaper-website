@@ -22,6 +22,10 @@ function test_new_contact(){
 add_filter( 'user_contactmethods', 'test_new_contact' );
 
 
+add_action('admin_menu','wphidenag');
+function wphidenag() {
+remove_action( 'admin_notices', 'update_nag', 3 );
+}
 
 
 ?>

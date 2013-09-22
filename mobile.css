@@ -10,7 +10,7 @@
 /*---------------------------------------------------------------------------*/
 
 @media screen and (max-width: 980px) {
-	body{margin-top:-10px;}
+	
 	#comments { width: auto; }
 	
 	#logo { min-height: 132px; }

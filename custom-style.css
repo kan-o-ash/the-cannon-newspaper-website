@@ -2,12 +2,12 @@
 ==  CUSTOM STYLESHEET  ========================================================
 
 HOW TO USE THIS FILE:
-	Simply copy an existing style from the style.css file to this one and 
-	modify however you like. It will override the default style.
+    Simply copy an existing style from the style.css file to this one and 
+    modify however you like. It will override the default style.
 
 WHY USE THIS FILE:
-	Adding your custom CSS here will make it much easier to upgrade to a 
-	newer version of this theme without losing any of your customizations.
+    Adding your custom CSS here will make it much easier to upgrade to a 
+    newer version of this theme without losing any of your customizations.
 
 ===============================================================================
 ADD YOUR CUSTOM CSS BELOW THIS LINE */
@@ -213,6 +213,14 @@ body {
     margin-right:0;
 }
 
+#sidebar .widget_execphp {
+    padding: 7px;
+}
+
+#sidebar .widget_execphp .widget-inside{
+    padding-bottom: 0px;
+}
+
 .sidebar-on #load-more { width: auto; }
 
 #load-more.disabled,
@@ -316,31 +324,3 @@ ul.social li{
     color: rgb(255,242,0);
 }
 
-
-/*---------------------------------------------------------------------------*/
-/*  Tablets - for 980px or less
-/*---------------------------------------------------------------------------*/
-
-@media screen and (max-width: 980px) {
-
-}
-
-
-/*---------------------------------------------------------------------------*/
-/*  Mobiles - for 680px or less
-/*---------------------------------------------------------------------------*/
-
-@media screen and (max-width: 640px) {
-    #header {
-        //margin-top: 50px !important;
-        padding: 0 !important;
-    }
-
-    #logo {
-        margin: 0 !important;
-    }
-
-    #rum_sst_tab{
-        display:none;
-    }
-}

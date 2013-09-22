@@ -1,0 +1,49 @@
+
+/*---------------------------------------------------------------------------*/
+/*  Tablets - for 980px or less
+/*---------------------------------------------------------------------------*/
+
+@media screen and (max-width: 980px) {
+    #container {
+        //width: 640px ;    }
+
+    .search-wrap input, .DT_Search input {
+        background: #fff ;
+        width: 150px !important;    }
+
+    #secondary-menu table {
+        width: 640px ;    }
+    
+    #logo {
+        min-height: 0px;    }
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*  Mobiles - for 680px or less
+/*---------------------------------------------------------------------------*/
+
+@media screen and (max-width: 640px) {
+    #header {
+        //margin-top: 50px ;
+        padding: 0 ;
+    }
+
+    #logo {
+        margin: 0 ;
+    }
+
+    .page-template-default #content .post-header,
+    .page-template-template-fullwidth-php #content .post-header,
+    .page-template-abouttemplate-php #content .post-header,
+    .single #content .post-header {
+        background: #fff;
+        padding: 20px 30px 5px; }
+
+    #container {
+        //width: 360px ;    }
+
+    #rum_sst_tab{
+        display:none;
+    }
+}
