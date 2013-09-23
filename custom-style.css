@@ -324,3 +324,5 @@ ul.social li{
     color: rgb(255,242,0);
 }
 
+.search-wrap input, .DT_Search input {
+    background: #fff;  }

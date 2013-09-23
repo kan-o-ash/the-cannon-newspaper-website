@@ -5,7 +5,7 @@
 
 @media screen and (max-width: 980px) {
     #container {
-        //width: 640px ;    }
+     }
 
     .search-wrap input, .DT_Search input {
         background: #fff ;
@@ -16,6 +16,10 @@
     
     #logo {
         min-height: 0px;    }
+
+    #comments {
+        width: 100%;    }
+        
 }
 
 
@@ -25,13 +29,18 @@
 
 @media screen and (max-width: 640px) {
     #header {
-        //margin-top: 50px ;
         padding: 0 ;
     }
 
     #logo {
         margin: 0 ;
     }
+
+    .page-template-default #content .post-content,
+    .page-template-template-fullwidth-php #content .post-content,
+    .single #content .post-content,
+    #comments .inner {
+        padding: 0 20px 20px;   }
 
     .page-template-default #content .post-header,
     .page-template-template-fullwidth-php #content .post-header,
@@ -46,4 +55,8 @@
     #rum_sst_tab{
         display:none;
     }
+
+    #footer-menu {
+        max-width: 90%;
+        margin: auto;   }
 }
