@@ -4,8 +4,6 @@
 <!--[if IE 8]><html <?php language_attributes(); ?> class="ie8"><![endif]-->
 <!--[if gt IE 8]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
 <head>
-	<link rel="icon" type="image/png" href="http://skule.ca/content/cannon-favicon.png">
-	<meta property="fb:admins" content="508350886" />
        <meta property="fb:admins" content="508350886" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
