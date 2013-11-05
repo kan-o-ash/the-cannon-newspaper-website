@@ -152,8 +152,8 @@ body {
 }
 
 #archive-title{
-    margin-bottom: 25px;
-    margin-right:0;
+    margin: 0 0 25px -10px;
+    width: 980px;
 }
 
 #archive-title .inner {

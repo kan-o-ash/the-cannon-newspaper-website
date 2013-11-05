@@ -7,6 +7,10 @@
     #container {
      }
 
+    #archive-title {
+        width:auto;
+    }
+
     .search-wrap input, .DT_Search input {
         background: #fff ;
         width: 150px !important;    }
