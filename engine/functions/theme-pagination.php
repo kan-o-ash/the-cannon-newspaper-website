@@ -40,7 +40,7 @@ function dt_pagination( $args = array() ) {
 		'type' => 'plain',
 		'before' => '<div class="pagination loop-pagination">', // Begin loop_pagination() arguments.
 		'after' => '</div>',
-		'echo' => true,
+		'echo' => false,
 	);
 
 	/* Add the $base argument to the array if the user is using permalinks. */
@@ -80,7 +80,7 @@ function dt_pagination( $args = array() ) {
 	if ( $args['echo'] )
 		echo $page_links;
 	else
-		return $page_liks;
+		return $page_links;
 }
 
 ?>

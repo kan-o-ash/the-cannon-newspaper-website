@@ -17,10 +17,9 @@ if($found_posts > $per_page) :
 			<div id="loader" data-perpage="<?php echo $per_page; ?>"></div>
 			<div class="load-more-text"><?php _e('Load More', 'engine'); ?></div>
 		</span>
-		
 	</a>
 	
 <!--END #load-more.item -->	
-</div>
+</div> 	
 
 <?php endif; ?>

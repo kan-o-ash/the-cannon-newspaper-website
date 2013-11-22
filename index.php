@@ -75,7 +75,6 @@
 							<span class="da-wrap"><a href="<?php the_permalink(); ?>">
 								<span class="title"><?php the_title(); ?></span>
 								<?php dt_overlay_icon(); ?></a>
-
 							</span>
 						</div>
 						<a href="<?php the_permalink(); ?>"><?php dt_image(300, ''); ?></a>
@@ -112,7 +111,7 @@
 			</div>
 			<?php $count++; endwhile; endif; ?>
 			
-			<?php //get_template_part('includes/index-loadmore'); ?>
+			<?php get_template_part('includes/index-loadmore'); ?>
 					
 		<!--END #masonry -->
 		</div>
