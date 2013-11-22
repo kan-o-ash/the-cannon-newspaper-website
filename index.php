@@ -59,7 +59,7 @@
 		<div id="masonry">
 						
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<?php  if ($count == 30) {break;}  ?>  
+			<?php  if ($count == 40) {break;}  ?>  
 			<?php $terms = get_the_terms( get_the_ID(), 'category' ); ?>
 			
 			<!--BEGIN .item -->	
