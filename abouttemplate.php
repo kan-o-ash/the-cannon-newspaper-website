@@ -62,7 +62,7 @@ Template Name: abouttemplate
   .authors a {
     display:inline;
     text-decoration:none;
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
 
   .author-table tr:nth-child(odd) td {
@@ -183,7 +183,7 @@ $(document).ready(function() {
                   </a>
                   <?php 
                     $info = '<h2>'.$curauth->first_name.' '.$curauth->last_name."</h2><br />".$curauth->aim."<br />".$curauth->yim; 
-                    if ($count <= 10){
+                    if ($count < 10){
                       if ($curauth->first_name == "Maddy"){
                         $curauth_email = "arts.culture@cannon.skule.ca";
                       }
