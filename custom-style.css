@@ -12,6 +12,11 @@ WHY USE THIS FILE:
 ===============================================================================
 ADD YOUR CUSTOM CSS BELOW THIS LINE */
 
+@font-face {
+    font-family: myfont;
+    src: url('includes/PathwayGothicOne-Regular.ttf');
+}
+
 body {
     background: url("http://skule.ca/content/thecannon_bg_pattern.png");
     font-family: 'Merriweather', Open Sans, Helvetica, Arial, sans-serif;
@@ -152,8 +157,8 @@ body {
 }
 
 #archive-title{
-    margin-bottom: 25px;
-    margin-right:0;
+    margin: 0 0 25px -10px;
+    width: 980px;
 }
 
 #archive-title .inner {
@@ -326,3 +331,39 @@ ul.social li{
 
 .search-wrap input, .DT_Search input {
     background: #fff;  }
+
+.single #head {
+    margin-bottom:20px;
+    overflow:auto;
+}
+
+.single #head .hentry {
+    padding: 7px 0;
+    border: 0;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+    overflow: hidden;
+}
+
+.single #head .post-header {
+    background: #fff;
+    padding: 20px 30px 25px;
+}
+
+.single #head .post-content {
+    background: #fff;
+    text-align: left;
+    font: normal 13px/1.8 'Merriweather', serif;
+    padding: 25px 30px 20px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.page-template-default #head .post-content,
+.page-template-template-fullwidth-php #head .post-content,
+.page-template-abouttemplate-php #head .post-content {
+    padding: 0 30px 20px;
+}
+
+.single #head .post-content img { margin-bottom: 10px; }
