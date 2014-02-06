@@ -21,6 +21,30 @@ jQuery(document).ready(function() {
 /*	Extras
 /*-----------------------------------------------------------------------------------*/
 
+  jQuery("#filter li:nth-child(6)").click(function(){
+    jQuery(".dashboardbg").css("display","block"); 
+  });
+   jQuery("#filter li:nth-child(1)").click(function(){
+    jQuery(".dashboardbg").css("display","none"); 
+  });
+jQuery("#filter li:nth-child(2)").click(function(){
+    jQuery(".dashboardbg").css("display","none"); 
+  });
+jQuery("#filter li:nth-child(3)").click(function(){
+    jQuery(".dashboard").css("display","none"); 
+  });
+jQuery("#filter li:nth-child(4)").click(function(){
+    jQuery(".dashboardbg").css("display","none"); 
+  });
+jQuery("#filter li:nth-child(5)").click(function(){
+    jQuery(".dashboardbg").css("display","none"); 
+  });
+jQuery("#filter li:nth-child(7)").click(function(){
+    jQuery(".dashboardbg").css("display","none"); 
+  });
+
+
+
 	jQuery(".tabber ul.tabs").tabs(".tabber div.panes > div", {
 		effect: 'fade'
 	});
@@ -454,7 +478,7 @@ jQuery(document).ready(function() {
 	}
 	
 	dt_hover();
-
+  
 
 /*-----------------------------------------------------------------------------------*/
 /*	We've finished dancing!
