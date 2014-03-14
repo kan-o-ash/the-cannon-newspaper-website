@@ -33,12 +33,12 @@ Template Name: abouttemplate
 
   .about-avatar {
     width: 160px;
-    height:240px;
     margin: 10px auto;
   }
 
-  .about-avatar img{
+  #content .about-avatar img{
     width: 100%;
+    margin-bottom: 0;
   }
 
   .about-info {
@@ -76,7 +76,9 @@ Template Name: abouttemplate
   .author-cell:hover {
     background: rgba(0,0,0,0.05);
   }
-
+  .page-template-abouttemplate-php #content .post-content img {
+    margin: 0;
+  }
   .page-template-abouttemplate-php #content .post-content{
     padding:0;
   } 
@@ -182,7 +184,7 @@ $(document).ready(function() {
                     </div>
                   </a>
                   <?php 
-                    $info = '<h2>'.$curauth->first_name.' '.$curauth->last_name."</h2><br />".$curauth->aim."<br />".$curauth->yim; 
+                    $info = '<h2>'.$curauth->first_name.' '.$curauth->last_name."</h2>".$curauth->aim."<br/>".$curauth->yim; 
                     if ($count < 10){
                       if ($curauth->first_name == "Maddy"){
                         $curauth_email = "arts.culture@cannon.skule.ca";
