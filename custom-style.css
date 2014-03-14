@@ -2,16 +2,24 @@
 ==  CUSTOM STYLESHEET  ========================================================
 
 HOW TO USE THIS FILE:
-    Simply copy an existing style from the style.css file to this one and 
-    modify however you like. It will override the default style.
+	Simply copy an existing style from the style.css file to this one and 
+	modify however you like. It will override the default style.
 
 WHY USE THIS FILE:
-    Adding your custom CSS here will make it much easier to upgrade to a 
-    newer version of this theme without losing any of your customizations.
+	Adding your custom CSS here will make it much easier to upgrade to a 
+	newer version of this theme without losing any of your customizations.
 
 ===============================================================================
 ADD YOUR CUSTOM CSS BELOW THIS LINE */
-
+.dashboardbg {
+  
+	padding: 7px 0;
+	margin: 0 20px 40px 0;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+    display:none;
+}
 @font-face {
     font-family: myfont;
     src: url('includes/PathwayGothicOne-Regular.ttf');
@@ -83,6 +91,23 @@ body {
 .post-header .meta-author a:hover{
     color: #0080ff;
 }
+.dashboardbg .inner{
+	background: #fff;
+	padding: 14px 80px 10px;
+}
+.scoreboard {
+  border-style: 0px solid white;
+  border-radius: 5px;
+  border-collapse:separate;
+  border-spacing: 0 0.1em;
+}
+.scbhead{
+  background-color: #D7D7D7;
+}
+body #content .dashboardbg .inner .scoreboard td{
+  background-color: #EBEBEB;
+  border-left:none;
+}
 
 #secondary-menu .navigation{
     float: left;
@@ -95,7 +120,6 @@ body {
 .menu-search div{
     margin: 6px 0;
 }
-
 #secondary-menu ul a:hover {
     color: #0080ff;
 }

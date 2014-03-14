@@ -26,7 +26,7 @@
 		<!-- BEGIN #archive-title -->
     	<div id="archive-title">
 
-			<div class="inner <?php if($all_terms) : foreach ($all_terms as $term) { echo 'term-'.$term->term_id.' '; } endif; ?>">
+			<div class="inner <?php if($all_terms) : foreach ($all_terms as $term) { echo 'term-'.$term->term_id.' '; } endif; ?> dashboard">
 				<!-- THIS IS THE SHOWCASE TITLE AND LINE UNDERNEATH 
 				<h1 id="page-title">
 					<?php the_title(); ?>
@@ -56,6 +56,37 @@
     	<!-- END #archive-title -->
 
     	<!--BEGIN #masonry -->	
+    <div class="dashboardbg">
+      <div class="inner">
+        <table class="scoreboard">
+          <thead class="scbhead">
+            <tr>
+              <th style="text-align:center">Team</th>
+              <th style="text-align:center">Win</th>
+              <th style="text-align:center">Draw</th>
+              <th style="text-align:center">Loss</th>
+
+            </tr>
+          </thead> 
+          <tbody>
+			   <?php
+			   	$sports = $wpdb->get_results("SELECT * FROM sports"); 
+			   	foreach($sports as $sport) {
+				   	$teams = $wpdb->get_results("SELECT * FROM team_standings WHERE sport='".$sport->name."'");
+				   	foreach ($teams as $team){
+				   		echo '<tr class="scbrow">';
+				   		echo '<td>' . $team->name . '</td>';
+				   		echo '<td>' . $team->wins . '</td>';
+							echo '<td>' . $team->losses . '</td>';
+							echo '<td>' . $team->draws . '</td>';
+							echo '</tr>';
+				   	}
+				   }
+			   ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
 		<div id="masonry">
 						
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
