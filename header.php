@@ -151,9 +151,9 @@
 						
 		<!-- END #header -->
 		</div>
-	<!--	<div class="hentry item" style="font-size:13px;width: 100%; position:relative; z-index:5">
-			<strong>The Cannon is currently recruiting its 1T3-1T4 crew! For more information, visit the <a href="https://docs.google.com/forms/d/1zJEajpCYxs2DjbqaZ83vFOgplGbiwRUolMR3DO6L1Fk/viewform" target="_blank">application form</a>.</strong>
-		</div>-->
+	<!--	<div class="hentry item" style="font-size:13px;width: 100%; position:relative; z-index:5;margin-left:0">
+			<strong>The Cannon is recruiting for the winter! Check out <a href="/application" target="_blank">our application form</a>.</strong>
+		</div> -->
 		<?php 
 		if(is_front_page()) {
 			$slider = get_option('dt_slider'); 
