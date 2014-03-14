@@ -22,8 +22,15 @@
 					
 					<div id = "author-info">
 					<div id = "avatar-boundary" style = "padding-bottom:40px">
+				      <?php 
+                    $imgs_rel_dir = "/images/authors/";
+                    $img_rel_path = $imgs_rel_dir.$curauth->first_name."-web.jpg";
+                    $img_path = get_template_directory().$img_rel_path;
+                    if (file_exists($img_path)) $img_url = get_bloginfo('template_directory').$img_rel_path;
+                    else $img_url = get_bloginfo('template_directory').$imgs_rel_dir."placeholder.jpg";
+                  ?>
 						<img class = "circleBase" id = "avatar"
-							src = " <?php echo bloginfo('template_directory');?>/images/authors/<?php echo $curauth->first_name ?>-web.jpg"
+							src = " <?php echo $img_url; ?>"
 						/>
 					</div>
 					<h2><?php echo $curauth->first_name.' '.$curauth->last_name; ?></h2>
