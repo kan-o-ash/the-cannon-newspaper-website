@@ -31,7 +31,7 @@ jQuery("#filter li:nth-child(2)").click(function(){
     jQuery(".dashboardbg").css("display","none"); 
   });
 jQuery("#filter li:nth-child(3)").click(function(){
-    jQuery(".dashboard").css("display","none"); 
+    jQuery(".dashboardbg").css("display","none"); 
   });
 jQuery("#filter li:nth-child(4)").click(function(){
     jQuery(".dashboardbg").css("display","none"); 

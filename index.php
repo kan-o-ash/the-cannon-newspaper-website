@@ -55,7 +55,7 @@
     	</div>
     	<!-- END #archive-title -->
 
-    	<!--BEGIN #masonry -->	
+    	<!--BEGIN #masonry -->	<!--
     <div class="dashboardbg">
       <div class="inner">
         <table class="scoreboard">
@@ -69,7 +69,7 @@
             </tr>
           </thead> 
           <tbody>
-			   <?php
+			   <?php /*
 			   	$sports = $wpdb->get_results("SELECT * FROM sports"); 
 			   	foreach($sports as $sport) {
 				   	$teams = $wpdb->get_results("SELECT * FROM team_standings WHERE sport='".$sport->name."'");
@@ -81,12 +81,12 @@
 							echo '<td>' . $team->draws . '</td>';
 							echo '</tr>';
 				   	}
-				   }
+				   }*/
 			   ?>
           </tbody>
         </table>
       </div>
-    </div>
+    </div>-->
 		<div id="masonry">
 						
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
