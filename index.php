@@ -35,7 +35,7 @@
 				
 				<ul id="filter" class="clearfix">
 				
-					<li class="active"><a href="#" data-filter="*"><?php _e('All', 'engine'); ?></a> (<?php echo $total; ?>)</li>
+					<li class="active"><a href="#" data-filter="*"><?php _e('All', 'engine'); ?></a><!-- (<?php echo $total; ?>)--></li>
 					<?php 
 					wp_list_categories( array(
 							'taxonomy' => 'category',
@@ -43,7 +43,7 @@
 							'title_li' => '',
 							'depth' => 1,
 							'walker' => new Group_Walker(),
-							'show_count' => 1,
+							'show_count' => 0,
 							'exclude' => '1'
 						) 
 					); 
