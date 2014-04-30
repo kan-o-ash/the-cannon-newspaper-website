@@ -68,7 +68,7 @@ jQuery("#filter li:nth-child(7)").click(function(){
 /*-----------------------------------------------------------------------------------*/
 
 	jQuery('#primary-menu ul, #secondary-menu ul').superfish({
-		delay: 0,
+		delay: 800,
 		animation: {opacity:'show', height:'show'},
 		speed: 'fast',
 		autoArrows: false,
