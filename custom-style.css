@@ -11,14 +11,6 @@ WHY USE THIS FILE:
 
 ===============================================================================
 ADD YOUR CUSTOM CSS BELOW THIS LINE */
-.dashboardbg {
-	padding: 7px 0;
-	margin: 0 20px 40px 0;
-    background: #ddd;
-    border: 1px solid #ccc;
-    border-width: 1px 0;
-    display:none;
-}
 
 @font-face {
     font-family: myfont;
@@ -95,19 +87,32 @@ body {
 .post-header .meta-author a:hover{
     color: #0080ff;
 }
+
+.dashboardbg {
+    padding: 7px 0;
+    margin: 0 20px 40px 0;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+    display:none;
+}
+
 .dashboardbg .inner{
 	background: #fff;
 	padding: 14px 80px 10px;
 }
+
 .scoreboard {
   border-style: 0px solid white;
   border-radius: 5px;
   border-collapse:separate;
   border-spacing: 0 0.1em;
 }
+
 .scbhead{
   background-color: #D7D7D7;
 }
+
 body #content .dashboardbg .inner .scoreboard td{
   background-color: #EBEBEB;
   border-left:none;
@@ -172,7 +177,6 @@ body #content .dashboardbg .inner .scoreboard td{
 }
 
 #logo{
-    /*float: left;*/
     width: 400px;
 }
 
@@ -257,7 +261,6 @@ body #content .dashboardbg .inner .scoreboard td{
 }
 
 #site-title a { color: #333; }
-
 #site-title a:hover { color: #9c0; }
 #site-title a:active { color: #9c0; }
 
