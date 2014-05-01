@@ -289,7 +289,7 @@ function dt_init() {
 
 /* ==  Overlay Icon  ==============================*/
 
-function dt_overlay_icon() {
+function dt_overlay_icon($read_more_link = true) {
 
 	$format = get_post_format();
 
@@ -364,17 +364,19 @@ function dt_overlay_icon() {
 
 		    		<?php
 		    		endif;
-
 		    	endforeach;
-
 		    endif;
-
 		}
-
 	endif;
-	
-	?>
-	<a href="<?php the_permalink(); ?>">Read Post</a>
+
+   if ($read_more_link == true) {
+      echo "<a href=" . get_permalink() . ">Read Post</a>";
+   }
+   else {
+      echo "<span class='read-more'>Read Post</span>";
+   }
+   ?>
+
 	<?php
 
 }

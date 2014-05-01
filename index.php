@@ -101,18 +101,18 @@
 
 					<?php if ( has_post_thumbnail() ) : ?>
 					<!--BEGIN .featured-image -->
+					<a href="<?php the_permalink(); ?>">
 					<div class="featured-image">
 						<div class="da-hover">
-							<span class="da-wrap"><a href="<?php the_permalink(); ?>">
+							<span class="da-wrap">
 								<span class="title"><?php the_title(); ?></span>
-								<?php dt_overlay_icon(); ?></a>
-
+								<?php dt_overlay_icon(false); ?>
 							</span>
 						</div>
-						<a href="<?php the_permalink(); ?>"><?php dt_image(300, ''); ?></a>
+						<?php dt_image(300, ''); ?>
 					<!--END .featured-image -->
 					</div>
-
+					</a>
 					<?php endif; ?>
 					
 					<?php $format = get_post_format(); ?>

@@ -67,10 +67,12 @@ jQuery("#filter li:nth-child(7)").click(function(){
 /*	Menu Settings - http://users.tpg.com.au/j_birch/plugins/superfish/
 /*-----------------------------------------------------------------------------------*/
 
-	jQuery('#primary-menu ul, #secondary-menu ul').superfish({
+	jQuery('#primary-menu ul, #secondary-menu ul, #secondary-menu .parent').superfish({
 		delay: 800,
-		animation: {opacity:'show', height:'show'},
+		animation: {opacity:'show'},
+		animationOut: {opacity:'hide'},
 		speed: 'fast',
+  		speedOut: 'fast', 
 		autoArrows: false,
 		dropShadows: false
 	});

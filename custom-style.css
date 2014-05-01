@@ -207,18 +207,41 @@ body #content .dashboardbg .inner .scoreboard td{
 }
 
 .featured .post-title a {
-    //color:rgb(255,242,0);
     color: #fff;
     font-size: 40px;
 }
 
-.featured-image div .da-wrap {
-    position: relative;
-    width: auto;
+.featured .featured-details a.read-more {
+    color: rgb(255,242,0) !important;
 }
 
-.featured .featured-details a.read-more {
-    color:rgb(255,242,0);
+/* Extra div in selector is so that it overrides style.css properly */
+.featured-image div .da-wrap { 
+    position: relative;
+    width: auto;
+    margin: auto;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+
+.featured-image .title {
+    display: inline;
+    font-weight: bold;
+}
+
+.featured-image .title:hover {
+    color: #0080ff;
+}
+
+.featured-image .da-wrap .read-more {
+    color: #fff200;
+    font-weight: bold;
+}
+
+.featured-image .da-wrap .read-more:hover {
+    color: #0080ff;
 }
 
 #comments {
