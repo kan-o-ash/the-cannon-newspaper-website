@@ -288,15 +288,27 @@ body #content .dashboardbg .inner .scoreboard td{
     display:none;
 }
 
-ul.social{
+#footer-menu .social {
     float: right;
     list-style: none;
     margin: -5px;
 }
 
-ul.social li{
+#footer-menu .social li {
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+#footer-menu .social li:first-child {
+    margin-top: 8px;
+}
+
+#footer-menu .social img {
+    opacity: 0.8;
+}
+
+#footer-menu .social img:hover {
+    opacity: 1.0;
 }
 
 #footer-menu{
